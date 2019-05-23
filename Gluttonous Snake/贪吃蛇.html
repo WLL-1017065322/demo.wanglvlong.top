@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .map {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: #ccc;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="map"></div>
+    <button class="start">开始</button>
+    <button class="reset">重新开始</button>
+    <button class="stop">暂停</button>
+    <script src="./main1.js"></script>
+    <script>
+
+        //test code
+        //    var fd = new Food;
+        // fd.init(document.querySelector(".map"))
+        // fd.init(document.querySelector(".map"))
+        // fd.init(document.querySelector(".map"))
+        // fd.init(document.querySelector(".map"))
+        //console.log(fd.x + "======" + fd.y)
+
+        // var sn = new Snake;
+
+        //初始化游戏对象
+        var game = new Game(document.querySelector(".map"));
+        //游戏开始
+        game.init();
+        //添加 蛇的暂停和重新开始 19.5.6
+        document.querySelector(".start").onclick = function () {
+            game.init();
+        }
+        document.querySelector(".reset").onclick = function () {
+            location.reload();
+        }
+        document.querySelector(".stop").onclick = function () {
+            alert("暂停")
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
