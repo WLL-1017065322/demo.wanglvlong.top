@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            letter-spacing: 5px;
+        }
+
+        header {
+            height: 50px;
+            width: 100%;
+            /* color: aqua; */
+        }
+
+        nav .container {
+            height: 50px;
+            width: 1200px;
+            /* background-color: aqua; */
+            margin: 0 auto;
+
+        }
+
+        nav .container .header-left {
+            float: left;
+
+        }
+
+        nav .container .header-left a {
+            text-decoration: none;
+            line-height: 50px;
+            font-size: 30px;
+            margin-left: 30px;
+
+            color: #000;
+        }
+
+        nav .container .header-left a::after {
+            content: '';
+            background-color: #ccc;
+            height: 30px;
+            width: 1px;
+            position: absolute;
+            top: 10px;
+            margin-left: 20px;
+        }
+
+        nav .container .header-left span {
+            color: #ccc;
+            font-size: 16px;
+            margin-left: 40px;
+            line-height: 50px;
+            display: block;
+            float: right;
+        }
+
+        nav .container .header-right {
+            float: right;
+            line-height: 50px;
+
+
+        }
+
+        nav .container .header-right a {
+            display: inline-block;
+            margin: 0 20px;
+            color: #000;
+            height: 40px;
+
+
+
+
+        }
+
+        nav .container .header-right a:hover {
+            border-bottom: 2px solid #000;
+            /* transition: all 1s ease-out; */
+
+        }
+
+
+        section {
+            width: 100 background-color: #000
+        }
+
+        section .container {
+            height: 100vh;
+            width: 1200px;
+            /* background-color: aqua; */
+            margin: 20px auto;
+
+        }
+
+        section .container .production-webpage {
+            height: 400px;
+        }
+
+        section .container .production-webpage span {
+            font-size: 35px;
+        }
+
+        section .container .production-webpage .items {
+            width: 80%;
+            height: 354px;
+
+            border: 1px solid #ccc;
+
+            display: flex;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section .container .production-webpage .items .item{
+            width: 20%;
+            height: 20%;
+            background: #000;
+            
+        }
+
+
+
+        section .container .production-game {
+            height: 400px;
+        }
+
+
+        section .container .production-game span {
+            font-size: 35px;
+        }
+
+        section .container .production-game {}
+
+        section .container .production-game {}
+
+        section .container .production-game {}
+
+        section .container .production-game .items {
+            width: 80%;
+            height: 354px;
+
+            border: 1px solid #ccc;
+        }
+
+        section .container .production-game .items .item{
+            width: 20%;
+            height: 20%;
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="header-left">
+                    <a href="">along</a>
+
+                    <span>但行前路，莫问前途</span>
+
+
+                </div>
+                <div class="header-right">
+                    <a href="http://www.wanglvlong.top/">首页</a>
+                    <a href="https://wll-1017065322.github.io">博客</a>
+                    <a href="#">百科</a>
+                    <a href="http://demo.wanglvlong.top/">作品</a>
+                    <a href="/about.html">关于</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <section>
+        <div class="container">
+            <div class="production-webpage">
+                <span>webpage</span>
+                <div class="items">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+
+
+                </div>
+            </div>
+            <div class="production-game">
+                <span>game</span>
+                <div class="items">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>

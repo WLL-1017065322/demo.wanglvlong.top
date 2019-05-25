@@ -23,7 +23,9 @@ header {
     width: 100%;
     height: 50px;
     border: 1px solid black;
-    display: fixed;
+    position: fixed;
+    top:0;
+    background-color: #000;
 
     /* min-width: 800px; */
     
@@ -81,11 +83,20 @@ header .header-container .header-right a:hover{
     border-bottom: 2px solid #000; 
 }
 
+section {
+    margin-top: 80px;
+}
 
 
 section .section-container {
     margin: 0 auto;
     width: 1000px;
     height: 300px;
-    background-color: #000;
+    /* background-color: #000; */
+}
+
+section .section-container production-webpage{
+    font-size: 40px;
+
+
 }
