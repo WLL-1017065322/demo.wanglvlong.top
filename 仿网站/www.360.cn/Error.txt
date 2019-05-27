@@ -1,0 +1,2 @@
+﻿文件下载网址  =>  文件保存路径
+https://www.360.cn/{$pic}  =>  Z:\software\好用的工具\单页扒站小工具\www.360.cn\images\a8c1ebff3aef4cdb9f0a43b0e0518299.gif
