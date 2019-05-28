@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
         }
+        body {
+            overflow-x: hidden;
+        }
 
         ul {
             list-style: none;
@@ -136,13 +139,13 @@
             /* background: url("./images/img-bg.png") no-repeat; */
             /* background: url("./images/tim_bg_1.jpg") no-repeat; */
             /* background-color: orange; */
-            height: 778px;
+            height: 900px;
             width: 100%;
             /* background-attachment: fixed; */
         }
 
         .box1 .lunbo {
-            height: 100%;
+            height: 776px;
             width: 100%;
             position: relative;
             margin: 0 auto;
@@ -164,6 +167,9 @@
             z-index: 1;
         }
 
+        .box1 footer {
+            padding-top: -52px;
+        }
 
 
 
@@ -213,15 +219,37 @@
         .box1 .lunbo .item1 .content img {
             width: 100%;
             height: auto;
+            /* ===================== */
+            margin-top: -35px;
         }
 
         .box1 .circle {
             position: relative;
             width: 100%;
             height: 52px;
-            bottom: -52px;
-            z-index: 5;
+            bottom: 52px;
+            z-index: 1;
+            background: url("./images/linearbot.png") repeat-x left top;
 
+        }
+
+        .box1 .bottom {
+            position: relative;
+
+            margin: 0 auto;
+
+        }
+
+
+        .box1 .bottom .box1-bottom {
+            background: url("./images/brand.png") no-repeat center center;
+
+            width: 100%;
+            height: 280px;
+            z-index: 40;
+            background-color: #fff;
+
+            margin-top: -52px;
         }
 
 
@@ -229,12 +257,16 @@
 
 
         .box2 {
-            background: url("./images/bg1_1600.jpg") no-repeat;
+            background: url("./images/bg1_1600.jpg") no-repeat center center;
             /* background-color: red; */
-            height: 100vh;
+            background-size: cover;
+            height: 600px;
             width: 100%;
             background-attachment: fixed;
+            margin-top: 200;
         }
+
+        /* ========================================================== */
 
         .box3 {
             /* background: url("./images/pic1.png") no-repeat; */
@@ -244,9 +276,17 @@
             width: 100%;
             /* background-attachment: fixed; */
             position: relative;
+
         }
 
-        .box3 .box3-bg {
+        .box3 .container {
+            margin: 0 auto;
+            height: 584px;
+            width: 960px;
+
+        }
+
+        .box3 .container .box3-bg {
             height: 763px;
             width: 664px;
             background: url("./images/pic1.png") no-repeat;
@@ -254,39 +294,165 @@
             top: -179px;
         }
 
+        .box3 .container .text {
+            float: right;
+            margin-top: 120px;
+            width: 487px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box3 .container .text h2 {
+            background: url("./images/qcall_txt.png") no-repeat;
+            width: 100%;
+            height: 0;
+            padding-top: 135px;
+            overflow: hidden;
+        }
+
+        .box3 .container .text p {
+            width: 100%;
+            /* color: #666; */
+            line-height: 25px;
+            text-align: right;
+            opacity: 0.6;
+            font-size: 18px;
+            letter-spacing: .12em;
+            margin-bottom: 20px;
+
+        }
+
+        .box3 .container .text a {
+            text-align: right;
+            color: #12b7f5;
+            /* float: right; */
+
+        }
+
+        .box3 .container .text ul {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .box3 .container .text ul li {
+            margin-left: 30px;
+            font-size: 13px;
+            opacity: .5;
+            padding-top: 58px;
+        }
+
+
+
         .box4 {
-            background: url("./images/avds.jpg") no-repeat;
-            background-color: yellow;
-            height: 100vh;
+            background: url("./images/avds.jpg") no-repeat center center;
+            background-size: cover;
+            height: 600px;
             width: 100%;
             background-attachment: fixed;
         }
 
         .box5 {
+            /* margin-top: -200px; */
             /* background-color: green; */
             height: 584px;
             width: 100%;
             /* background-attachment: fixed; */
+            /* z-index: 3; */
+
         }
 
-        .box5 .box5-container .right {
+        .box5 .container {
+            margin: 0 auto;
+            height: 584px;
+            width: 960px;
+            position: relative;
+
+        }
+
+        .box5 .container .box3-bg {
+            height: 763px;
+            width: 664px;
+            background: url("./images/pic1.png") no-repeat;
+            position: absolute;
+            top: -179px;
+        }
+
+        .box5 .container .text {
+            float: left;
+            margin-top: 120px;
+            width: 487px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box5 .container .text h2 {
+            background: url("./images/txt.png") no-repeat;
+            width: 100%;
+            height: 0;
+            padding-top: 135px;
+            overflow: hidden;
+        }
+
+        .box5 .container .text p {
+            width: 100%;
+            /* color: #666; */
+            line-height: 25px;
+            text-align: left;
+            opacity: 0.6;
+            font-size: 18px;
+            letter-spacing: .12em;
+            margin-bottom: 20px;
+
+        }
+
+        .box5 .container .text a {
+            text-align: left;
+            color: #12b7f5;
+            /* float: left; */
+
+        }
+
+        .box5.container .text ul {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .box5 .container .text ul li {
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 13px;
+            opacity: .5;
+            padding-top: 58px;
+        }
+
+
+        .box5 .container .box5-bg {
             background: url("./images/pic2.png") no-repeat;
             /* background-color: #111; */
-            height: 584px;
+            height: 330px;
+            width: 597px;
+            position: absolute;
+            right: -100px;
+            bottom: 104px;
 
         }
 
         .box6 {
-            background: url("./images/bg3_1600.jpg") no-repeat;
-            background-color: #fff;
-            height: 100vh;
+            background: url("./images/bg3_1600.jpg") no-repeat center center;
+            background-size: cover;
+            /* background-color: #fff; */
+            height: 600px;
             width: 100%;
             background-attachment: fixed;
         }
 
         .box7 {
             /* background-color: #111; */
-            height: 100vh;
+            height: 600px;
             width: 100%;
             background-attachment: fixed;
         }
@@ -295,6 +461,177 @@
             height: 584px;
             background: url("./images/pic3.png") no-repeat;
 
+        }
+
+
+
+
+
+        .box7 {
+            /* background: url("./images/pic1.png") no-repeat; */
+            /* background-color: blue; */
+            height: 584px;
+
+            width: 100%;
+            /* background-attachment: fixed; */
+            position: relative;
+
+        }
+
+        .box7 .container {
+            margin: 0 auto;
+            height: 584px;
+            width: 960px;
+
+        }
+
+        .box7 .container .box7-bg {
+            height: 506px;
+            width: 344px;
+            background: url("./images/pic3.png") no-repeat;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .box7 .container .text {
+            float: right;
+            margin-top: 120px;
+            width: 487px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box7 .container .text h2 {
+            background: url("./images/qcall_txt.png") no-repeat;
+            width: 100%;
+            height: 0;
+            padding-top: 135px;
+            overflow: hidden;
+        }
+
+        .box7 .container .text p {
+            width: 100%;
+            /* color: #666; */
+            line-height: 25px;
+            text-align: right;
+            opacity: 0.6;
+            font-size: 18px;
+            letter-spacing: .12em;
+            margin-bottom: 20px;
+
+        }
+
+        .box7 .container .text a {
+            text-align: right;
+            color: #12b7f5;
+            /* float: right; */
+
+        }
+
+        .box7 .container .text ul {
+            margin-top: 30px;
+            display: flex;
+            justify-content: flex-end;
+
+        }
+
+        .box7 .container .text ul li {
+            margin-left: 30px;
+            font-size: 13px;
+            opacity: .5;
+            padding-top: 58px;
+        }
+
+
+
+        /* ================================ */
+
+
+        footer {
+            background: #2a2a2a;
+            width: 100%;
+            height: 280px;
+            min-width: 1300px;
+            padding-bottom: 80px;
+
+        }
+
+        footer .container {
+            width: 960px;
+            height: 100%;
+            margin: 0 auto;
+
+        }
+
+        footer .container .top {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 13px;
+            padding-top: 30px;
+
+        }
+
+        footer .container .top ul h3 {
+            margin-bottom: 10px;
+        }
+
+        footer .container .top ul li {
+            margin-bottom: 3px;
+        }
+
+        footer .container .top ul li a{
+           color: #979797;
+        }
+        footer .container .top ul li a:hover{
+           color: #eee;
+        }
+
+        footer .container .top .liaojie ul {
+            display: flex;
+
+            justify-content: space-between;
+
+        }
+
+        footer .container .top .liaojie ul li {
+            /* box-sizing: border-box; */
+            margin: 20px 30px 40px 0;
+            padding-top: 60px;
+            cursor: pointer;
+
+        }
+
+        footer .container .top .liaojie ul li a {
+            color: #979797;
+
+        }
+
+        footer .container .top .liaojie ul li a:hover {
+            color: #12b7f5;
+
+        }
+        footer .container .top .youlian {
+            position: relative;
+        }
+
+        footer .container .top .youlian .tim{
+            position: absolute;
+            right: -70px;
+            top: 30px;
+
+        }
+
+        
+
+
+        footer .bottom {
+            text-align: center;
+            color: #666;
+            font-size: 12px;
+            border-top:1px solid #979797; 
+            padding-top: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -348,45 +685,133 @@
         <div class="circle">
             <span class="">&nbsp;</span>
             <span class="">&nbsp;</span>
-
         </div>
 
 
 
-        <footer>
-            <span>I'm QQ，每一天</span>
-            <span>乐·在·沟·通</span>
-        </footer>
+        <div class="bottom">
+
+            <div class="box1-bottom">
+                111
+
+            </div>
+        </div>
     </div>
+
+
     <div class="box2">2</div>
     <div class="box3">
-        <div class="text">沟通，是跨越千山万水的亲切声音</div>
-        <div class="box3-bg"></div>
+        <div class="container">
+            <div class="text">
+                <h2>沟通，是跨越千山万水的亲切声音</h2>
+                <p>无论何时何地，你都能自由享受QQ在各类终端<br>上带来的高清通话，与好友一起想聊多久聊多久</p>
+                <a href="">了解更多 ></a>
+                <ul>
+                    <li>两人多人通话</li>
+                    <li>群组通话</li>
+                    <li>屏幕分享</li>
+                </ul>
+
+            </div>
+            <div class="box3-bg"></div>
+        </div>
 
     </div>
+
+
     <div class="box4">4</div>
     <div class="box5">
-        <div class="box5-container">
-            <div class="left">
-                <span>沟通，是随时随地爽快收发</span>
+        <div class="container">
+            <div class="text">
+                <h2>沟通，是跨越千山万水的亲切声音</h2>
+                <p>无论何时何地，你都能自由享受QQ在各类终端<br>上带来的高清通话，与好友一起想聊多久聊多久</p>
+                <a href="">了解更多 ></a>
+                <ul>
+                    <li>两人多人通话</li>
+                    <li>群组通话</li>
+                    <li>屏幕分享</li>
+                </ul>
+
             </div>
-            <div class="right"></div>
+            <div class="box5-bg"></div>
         </div>
 
     </div>
     <div class="box6">6</div>
     <div class="box7">
-        <div class="box7-container">
-            <div class="left">
-                <div class="box7-bg"></div>
+        <div class="container">
+            <div class="text">
+                <h2>沟通，是跨越千山万水的亲切声音</h2>
+                <p>无论何时何地，你都能自由享受QQ在各类终端<br>上带来的高清通话，与好友一起想聊多久聊多久</p>
+                <a href="">了解更多 ></a>
+                <ul>
+                    <li>两人多人通话</li>
+                    <li>群组通话</li>
+                    <li>屏幕分享</li>
+                </ul>
+
             </div>
-            <div class="right">
-                <span>沟通，是志同道合的他们放肆青春</span>
-            </div>
+            <div class="box7-bg"></div>
         </div>
     </div>
 
-    <footer>了解热门产品</footer>
+    <footer>
+        <div class="container">
+            <div class="top">
+
+                <div class="liaojie">
+                    <h3>了解热门产品</h3>
+                    <ul>
+                        <li><a>QQ手机版</a></li>
+                        <li><a>QQ手机版</a></li>
+                        <li><a>QQ手机版</a></li>
+                        <li><a>QQ手机版</a></li>
+                    </ul>
+                </div>
+
+
+                <ul class="anquan">
+                    <h3>QQ安全</h3>
+                    <li><a href="">安全中心</a></li>
+                    <li><a href="">安全中心</a></li>
+                    <li><a href="">安全中心</a></li>
+                    <li><a href="">安全中心</a></li>
+                    <li><a href="">安全中心</a></li>
+                </ul>
+                <ul class="bangzhu">
+                    <h3>帮助反馈</h3>
+                    <li><a href="">腾讯客服</a></li>
+                    <li><a href="">腾讯客服</a></li>
+                    <li><a href="">腾讯客服</a></li>
+                    <li><a href="">腾讯客服</a></li>
+
+                </ul>
+                <ul class="youlian">
+                    <h3>友情链接</h3>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <li><a href="">兴趣部落</a></li>
+                    <ul class="tim">
+                        <li><a>TIM</a></li>
+                        <li><a>腾讯文档</a></li>
+                        <li><a>腾讯文档</a></li>
+                        <li><a>腾讯文档</a></li>
+                    </ul>
+                </ul>
+
+
+
+            </div>
+            <div class="bottom">
+                <p>Copyright © 1998-2019 Tencent. All Rights Reserved.</p>
+                <p>腾讯公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
 
 
 </body>
