@@ -8,13 +8,225 @@
     <title>Document</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        header {
+            height: 75px;
+            width: 100%;
+            position: absolute;
+            z-index: 900;
+        }
+
+        header .container {
+            /* height: 100%; */
+            width: 1020px;
+            margin: 0 auto;
+            /* height: 758px;
+            width: 100%; */
+        }
+
+        header .container .left {
+            height: 75px;
+            float: left;
+            display: flex;
+            /* box-sizing: border-box; */
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+
+        }
+
+        header .container .left .header-logo {
+            /* background: url("./images/") no-repeat; */
+            font-size: 40px;
+
+
+        }
+
+        header .container .left ul {
+            display: flex;
+            margin-left: 18px;
+
+
+
+        }
+
+        header .container .left ul li {
+            margin: 0 20px;
+            width: 76px;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+
+        }
+
+        header .container .left ul li:hover {
+            background: #12b7f5;
+        }
+
+        header .container .right {
+            display: flex;
+            float: right;
+            height: 75px;
+            line-height: 75px;
+            font-size: 14px;
+
+
+        }
+
+        header .container .right .zhuce {
+            height: 39px;
+            width: 96px;
+            margin: 0 20px;
+            /* height: 0; */
+            /* border-radius: 50%; */
+
+            background: url("./images/icons.png") no-repeat 0 -244px;
+            /* background-position: 0px 9px; */
+            /* padding: 39px 0 0 0;  */
+
+            margin: 18px 0 0 0;
+
+
+        }
+
+        header .container .right ul {
+            display: flex;
+
+        }
+
+        header .container .right ul li {
+            margin: 0 20px;
+
+        }
+
+        /* .box1 .box1-top {
+            padding: 10% 0 10%;
+            width: 807px;
+            height: 120px;
+
+            margin: 0 auto;
+        }
+
+        /* .box1 .box1-top .left {
+            background: url("./images/title-text-1920b.png") no-repeat;
+            width: 459px;
+            height: 116px;
+
+            float: left;
+        } */
+
+
+        /* box====================== */
+
+
         .box1 {
             /* background: url("./images/img-bg.png") no-repeat; */
-            background-color: orange;
-            height: 100vh;
+            /* background: url("./images/tim_bg_1.jpg") no-repeat; */
+            /* background-color: orange; */
+            height: 778px;
             width: 100%;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
         }
+
+        .box1 .lunbo {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            min-width: 1007px;
+
+        }
+
+        .box1 .lunbo li {
+            position: absolute;
+            /* display: none; */
+            left: 50%;
+            top: 0;
+            width: 1920px;
+            height: 100%;
+            /* width: 100%; */
+            margin: 0 0 0 -960px;
+            /* display: none; */
+            z-index: 1;
+        }
+
+
+
+
+
+
+        .box1 .lunbo .item1 {
+            background: url("./images/pcqq_bg.jpg") no-repeat center center;
+            background-size: cover;
+
+        }
+
+        .box1 .lunbo .item1 .content {
+            position: relative;
+            max-width: 1900px;
+            min-width: 960px;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        .box1 .lunbo .item1 .content .item1-top {
+            width: 807px;
+            height: 120px;
+            margin: 0 auto;
+            padding: 6% 0 2%;
+            display: flex;
+
+        }
+
+        .box1 .lunbo .item1 .content .item1-top .left {
+            background: url("./images/title-text-1920b.png") no-repeat center top;
+            width: 459px;
+            height: 116px;
+
+        }
+
+        .box1 .lunbo .item1 .content .item1-top .right {
+            background: url("./images/title-button-b.png") no-repeat;
+            width: 347px;
+            height: 120px;
+            float: right;
+        }
+
+
+
+
+        .box1 .lunbo .item1 .content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .box1 .circle {
+            position: relative;
+            width: 100%;
+            height: 52px;
+            bottom: -52px;
+            z-index: 5;
+
+        }
+
+
+
+
 
         .box2 {
             background: url("./images/bg1_1600.jpg") no-repeat;
@@ -25,11 +237,21 @@
         }
 
         .box3 {
-            background: url("./images/pic1.png") no-repeat;
+            /* background: url("./images/pic1.png") no-repeat; */
             /* background-color: blue; */
-            height: 10vh;
+            height: 584px;
+
             width: 100%;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
+            position: relative;
+        }
+
+        .box3 .box3-bg {
+            height: 763px;
+            width: 664px;
+            background: url("./images/pic1.png") no-repeat;
+            position: absolute;
+            top: -179px;
         }
 
         .box4 {
@@ -41,10 +263,17 @@
         }
 
         .box5 {
-            background-color: green;
-            height: 10vh;
+            /* background-color: green; */
+            height: 584px;
             width: 100%;
-            background-attachment: fixed;
+            /* background-attachment: fixed; */
+        }
+
+        .box5 .box5-container .right {
+            background: url("./images/pic2.png") no-repeat;
+            /* background-color: #111; */
+            height: 584px;
+
         }
 
         .box6 {
@@ -56,23 +285,108 @@
         }
 
         .box7 {
-            background-color: #111;
+            /* background-color: #111; */
             height: 100vh;
             width: 100%;
             background-attachment: fixed;
+        }
+
+        .box7 .box7-container .left .box7-bg {
+            height: 584px;
+            background: url("./images/pic3.png") no-repeat;
+
         }
     </style>
 </head>
 
 <body>
 
-    <div class="box1">1</div>
+    <header>
+        <div class="container">
+            <div class="left">
+                <a href="" class="header-logo">QQ</a>
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">下载</a></li>
+                    <li><a href="">动态</a></li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <a class="zhuce"></a>
+                <!-- <a class="zhuce">注册</a> -->
+                <ul>
+                    <li><a href="">QQ会员</a></li>
+                    <li><a href="">QQ安全</a></li>
+                    <li><a href="">登录</a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </header>
+
+
+    <div class="box1">
+        <ul class="lunbo">
+            <li class="item1">
+                <div class="content">
+                    <div class="item1-top ">
+                        <div class="left"></div>
+                        <div class="right"></div>
+                    </div>
+                    <img src="./images/img-bg.png" alt="">
+                </div>
+
+            </li>
+            <li class="item2">
+
+            </li>
+
+        </ul>
+        <div class="circle">
+            <span class="">&nbsp;</span>
+            <span class="">&nbsp;</span>
+
+        </div>
+
+
+
+        <footer>
+            <span>I'm QQ，每一天</span>
+            <span>乐·在·沟·通</span>
+        </footer>
+    </div>
     <div class="box2">2</div>
-    <div class="box3">3</div>
+    <div class="box3">
+        <div class="text">沟通，是跨越千山万水的亲切声音</div>
+        <div class="box3-bg"></div>
+
+    </div>
     <div class="box4">4</div>
-    <div class="box5">5</div>
+    <div class="box5">
+        <div class="box5-container">
+            <div class="left">
+                <span>沟通，是随时随地爽快收发</span>
+            </div>
+            <div class="right"></div>
+        </div>
+
+    </div>
     <div class="box6">6</div>
-    <div class="box7">7</div>
+    <div class="box7">
+        <div class="box7-container">
+            <div class="left">
+                <div class="box7-bg"></div>
+            </div>
+            <div class="right">
+                <span>沟通，是志同道合的他们放肆青春</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>了解热门产品</footer>
 
 
 </body>
