@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+        }
+
+        .middle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .middle .btn {
+            position: relative;
+            display: block;
+            margin: 30px 0;
+            text-transform: uppercase;
+            padding: 14px 60px;
+            border: 1px solid pink;
+            color: #fff;
+            text-decoration: none;
+            overflow: hidden;
+            transition: 1s all ease;
+
+            /* overflow: hidden; */
+
+
+        }
+
+        .middle .btn::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            transition: all 0.6s ease;
+
+            background: #8b008b;
+            /* width: 10px; */
+            /* height: 100%; */
+            /* margin: 20px 0; */
+            /* padding: 10px 30px; */
+            /* border: 1px solid pink; */
+
+        }
+
+        .middle .btn1::before {
+            width: 0%;
+            height: 100%;
+            /* background: #fff; */
+
+        }
+
+        .middle .btn1:hover::before {
+            width: 100%;
+            /* height: 30px; */
+        }
+
+        .middle .btn2::before {
+            width: 100%;
+            height: 0;
+        }
+
+        .middle .btn2:hover:before {
+            height: 100%;
+
+        }
+
+        .middle .btn3::before {
+            width: 100%;
+            height: 0%;
+            /* height: 100%; */
+            /* background: #fff; */
+            transform: translate(-50%,-50%) rotate(45deg);
+            /* transform: translate(0%, -0%) rotate(45deg); */
+
+        }
+
+        .middle .btn3:hover::before {
+            height: 400%;
+            /* height: 30px; */
+        }
+
+
+        .middle .btn4::before {
+            width: 100%;
+            height: 0%;
+            /* height: 100%; */
+            /* background: #fff; */
+            transform: translate(-50%,-50%) rotate(45deg);
+            /* transform: translate(0%, -0%) rotate(45deg); */
+
+        }
+
+        .middle .btn4:hover::before {
+            height: 400%;
+            /* height: 30px; */
+        }
+
+
+
+
+        .middle .btn1:hover {
+            /* background: purple; */
+            /* transition: 1s; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="middle">
+        <a href="" class="btn btn1">hover me</a>
+        <a href="" class="btn btn2">hover me</a>
+        <a href="" class="btn btn3">hover me</a>
+        <a href="" class="btn btn4">hover me</a>
+    </div>
+
+</body>
+
+</html>
