@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            background-color: #1e272e;
+        }
+
+        .wrap {
+            width: 100px;
+            height: 100%;
+            /* background-color: cornflowerblue;  */
+            position: relative;
+            transform: rotateZ(45deg);
+        }
+
+        .star {
+            height: 2px;
+            /* width: 0; */
+            width: 100px;
+            /* background-color: yellow; */
+            /* 渐变 */
+            background: linear-gradient(-45deg, #ceecee, rgba(0, 0, 255, 0));
+            position: absolute;
+            border-radius: 50%;
+            /* 滤镜 阴影 */
+            filter: drop-shadow(0 0 6px #c7ecee);
+
+            animation: scaling 1s linear infinite, moveTo 1s linear infinite;
+            /* animation: scaling 3s infinite; */
+            /* display: none; */
+            /* transition: 0.3s; */
+
+            
+
+
+
+
+
+
+        }
+
+        .star:nth-child(1) {
+            top: 50%;
+            left: 20%;
+            animation-delay: 2s;
+            
+
+
+
+        }
+
+        .star:nth-child(2) {
+            top: 40%;
+            left: 20%;
+            animation-delay: 1s;
+
+        }
+
+
+        @keyframes scaling {
+            0% {
+                width: 100px;
+                /* opacity: 0; */
+
+            }
+        
+            50% {
+                width: 100px;
+                /* transform: scaleX(1); */
+                opacity: 1;
+                /* transform-origin: right; */
+            } 
+
+        
+            100% {
+                width: 0;
+                /* transform-origin: 0 0 scale(0); */
+                opacity: 0;
+                /* transform-origin: right; */
+            }
+        }
+
+        @keyframes moveTo {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(250px);
+            }
+
+            100% {
+                transform: translateX(500px);
+            }
+        }
+
+
+
+
+
+
+        /* 流行移动动画 */
+
+        /* @keyframes moveTo {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(200px);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="star"></div>
+        <div class="star"></div>
+        <!-- <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div> -->
+    </div>
+
+
+</body>
+
+</html>
