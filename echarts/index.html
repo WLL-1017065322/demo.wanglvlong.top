@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- 引入文件 -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+          <form class="form-horizontal">
+            <input
+              type="text"
+              id="place-input"
+              class="form-control"
+              placeholder="请输入地址："
+            />
+            <button type="button" id="search-btn" class="btn btn-success">
+              查询
+            </button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="main" style="height: 500px;"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.2.1/echarts-en.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="./js/china.js"></script>
+    <script>
+      //百度密钥
+
+      var token = "XDtndWyYbw13OOH0gHqhDGkaIIyiGuur";
+      // var url = `http://api.map.baidu.com/geocoding/v3/?address='+'&output=json&ak=${token}&callback=?`;
+      var url = "http://api.map.baidu.com/geocoding/v3/?address=";
+
+      var eplaceInput = $("#place-input");
+      var eSearchBtn = $("#search-btn");
+      // 001 初始化echarts实例
+      var myChart = echarts.init(document.getElementById("main"));
+
+      eSearchBtn.click(function() {
+        var place = eplaceInput.val();
+        if (place) {
+          $.getJSON(
+            url + place + "&output=json&ak=" + token + "&callback=?",
+            function(res) {
+              if (res.status === 0) {
+                drawMap(place,res.result.location)
+                console.log(place, res);
+              } else {
+                alert("百度没有找到地址信息");
+              }
+            }
+          );
+        }
+      });
+
+      function drawMap(name, loc) {
+        // 002 指定图标的配置项和数据
+        var option = {
+          backgroundColor: "#404a59",
+          title: {
+            text: "地址搜索",
+            left: "center",
+            textStyle: {
+              color: "#fff"
+            }
+          },
+          tooltip: {
+            trigger: "item"
+          },
+          // 地图类型
+          geo: {
+            map: "china",
+            label: {
+              emphasis: {
+                show: false
+              }
+            },
+            roam: true, //是否开启鼠标缩放和平移漫游
+            itemStyle: { //地图区域的多边形 图形样式。
+              normal: {
+                areaColor: "#323c48",
+                borderColor: "#111"
+              },
+              emphasis: {
+                areaColor: "#2a333d"
+              }
+            }
+          },
+          series: [ //系列列表。每个系列通过 type 决定自己的图表类型
+            {
+              name: "地址",
+              type: "scatter", //散点（气泡）图
+              coordinateSystem: "geo", //使用地理坐标系
+              data: [ //系列中的数据内容数组
+                {
+                  name: name,
+                  value: [loc.lng, loc.lat]
+                }
+              ],
+              symbolSize: function(val){ //标记的大小
+                  return 10;
+              },
+            }
+          ]
+        };
+
+        // 003 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+      }
+    </script>
+  </body>
+</html>
