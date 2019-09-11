@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
+    <style>
+      body {
+        background: #000;
+      }
+
+      @media (min-width: 1500px) {
+        .container {
+          max-width: 1600px;
+        }
+      }
+      .container {
+        background: rgb(25, 26, 44);
+      }
+
+      #main1,
+      #main2,
+      #main6,
+      #main7 {
+        /* width: 100%; */
+        /* width: 700px; */
+        height: 350px;
+        /* margin: 10px; */
+        background: rgb(37, 39, 62);
+        margin-top: 15px;
+        /* min-width: 540px; */
+      }
+      #main3,
+      #main4,
+      #main5 {
+        /* width: 100%; */
+        /* min-width: 350px; */
+        height: 350px;
+        margin-top: 15px;
+        background: rgb(37, 39, 62);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>天气预报</h1> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="main1"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="main2"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div id="main3"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="main4"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="main5"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="main6"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="main7"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.bootcss.com/echarts/4.3.0-rc.1/echarts.min.js"></script>
+    <script src="./js/china.js"></script>
+
+    <script>
+          
+
+
+            var myChart1 = echarts.init(document.getElementById("main1"));
+            var myChart2 = echarts.init(document.getElementById("main2"));
+            var myChart3 = echarts.init(document.getElementById("main3"));
+            var myChart4 = echarts.init(document.getElementById("main4"));
+            var myChart5 = echarts.init(document.getElementById("main5"));
+            var myChart6 = echarts.init(document.getElementById("main6"));
+            var myChart7 = echarts.init(document.getElementById("main7"));
+
+            chartMap1();
+            chartMap2();
+            chartMap3();
+            chartMap4();
+            chartMap5();
+            chartMap6();
+            chartMap7();
+
+            function chartMap1() {
+              var option = {
+                animation: false, //动画
+                textStyle: {
+                  color: "#fff"
+                },
+                title: {
+                  text: "每日视频播放情况",
+                  subtext: "2019年4月20日",
+                  textStyle: {
+                    color: "#fff"
+                  }
+                },
+                tooltip: {
+                  trigger: "axis",
+                  axisPointer: {
+                    type: "cross",
+                    // animation: false,
+                    label: {
+                      backgroundColor: "#ccc",
+                      borderColor: "#aaa",
+                      borderWidth: 1,
+                      shadowBlur: 0,
+                      shadowOffsetX: 0,
+                      shadowOffsetY: 0,
+                      textStyle: {
+                        color: "#222"
+                      }
+                    }
+                  }
+                },
+                xAxis: {
+                  type: "category",
+                  axisLine: {
+                    lineStyle: {
+                      color: "#fff"
+                    }
+                  },
+                  axisLabel: {
+                    // showMaxLabel: true,
+                    showMinLabel: true
+                  },
+                  data: [
+                    "2019年4月20日",
+                    "2019年4月21日",
+                    "2019年4月22日",
+                    "2019年4月23日",
+
+                    "2019年4月20日",
+                    "2019年4月21日",
+                    "2019年4月22日",
+                    "2019年4月23日",
+
+                    "2019年4月20日",
+                    "2019年4月21日",
+                    "2019年4月22日",
+                    "2019年4月23日",
+
+                    "2019年4月20日",
+                    "2019年4月21日",
+                    "2019年4月22日",
+                    "2019年4月23日"
+                  ],
+                  boundaryGap: false //坐标轴两边留白策略
+                },
+                yAxis: {
+                  name: "播放次数",
+                  nameLocation: "center",
+                  nameGap: 35, //与坐标距离
+                  type: "value",
+                  axisLine: {
+                    lineStyle: {
+                      color: "#fff"
+                    }
+                  },
+                  splitLine: {
+                    lineStyle: {
+                      color: ["#ccc"],
+                      opacity: 0.2
+                    }
+                  },
+                  //自动分割
+                  // splitNumber: 4,
+                  max: 0,
+                  min: 680,
+                  interval: 170
+                },
+                dataZoom: {
+                  type: "slider",
+                  show: true,
+                  xAxisIndex: [0],
+                  backgroundColor: "rgba(47,69,84,0.2)"
+
+                  // left: "93%",
+                  // start: 29,
+                  // end: 36
+                },
+
+                series: [
+                  {
+                    data: [
+                      0,
+                      100,
+                      300,
+                      0,
+                      60,
+                      70,
+                      150,
+                      59,
+                      100,
+                      29,
+                      13,
+                      26,
+                      23,
+                      290,
+                      130,
+                      260,
+                      230
+                    ],
+                    type: "line",
+                    smooth: true
+                  }
+                ]
+              };
+              myChart1.setOption(option);
+            }
+
+            function chartMap2() {
+              var option = {
+                title: {
+                  text: "各平台播放人数",
+                  // subtext: "515",
+                  // subtextStyle: {
+                  //   fontSize: 15,
+                  // },
+                  textStyle: {
+                    color: "#ccc"
+                  },
+                  top: 0
+                },
+                textStyle: {
+                  color: "#ccc"
+                },
+
+                //提示框组件
+                tooltip: {
+                  trigger: "axis",
+                  axisPointer: {
+                    type: "shadow"
+                  }
+                },
+                //图形固定说明文字
+                // legend: {
+                //   data: ["2011年", "2012年"]
+                // },
+
+                //直角坐标系内绘图网格
+                grid: {
+                  // show: true,
+                  left: "3%",
+                  right: "4%",
+                  bottom: "3%",
+                  // grid 区域是否包含坐标轴的刻度标签。
+                  containLabel: true
+                  // backgroundColor: 'rgba(128, 128, 128, 0.1)',
+                },
+                xAxis: {
+                  type: "value",
+                  // 坐标轴两边留白策略
+                  boundaryGap: [0, 0.01],
+                  //坐标轴线
+                  axisLine: {
+                    show: false
+                  },
+                  //网格线
+                  splitLine: {
+                    show: true
+                  }
+                },
+                yAxis: {
+                  name: "总计",
+                  nameLocation: "end",
+                  nameGap: 5,
+                  nameTextStyle: {
+                    fontSize: 14
+                  },
+                  type: "category",
+                  data: ["土豆", "乐视", "B站", "爱奇艺", "优酷", "腾讯"],
+                  axisLine: {
+                    show: true,
+                    lineStyle: {
+                      // color: "#ccc",
+                      opacity: 0.8
+                    }
+                  }
+                },
+
+                // 视觉映射组件
+                visualMap: {
+                  // 如何放置 visualMap 组件，水平（'horizontal'）或者竖直（'vertical'）
+                  show:false,
+                  orient: "horizontal",
+                  left: "right",
+                  top: "top",
+                  min: 10,
+                  max: 100,
+                  text: ["High Score", "Low Score"],
+                  // Map the score column to color
+                  dimension: 0,
+                  inRange: {
+                    color: ["red", "blue"]
+                  }
+                },
+                series: [
+                  {
+                    name: "2011年",
+                    type: "bar",
+                    data: [26, 45, 62, 90, 130, 180],
+                    itemStyle: {},
+                    barWidth: "20px"
+                  }
+                ]
+              };
+
+              myChart2.setOption(option);
+            }
+
+            function chartMap3() {
+              var option = {
+                title: {
+                  text: "用户性别比例",
+                  x: "center",
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+
+                tooltip: {
+                  trigger: "item",
+                  formatter: "{a} <br/>{b} : {c} ({d}%)"
+                  // position: ['50%', '50%'],
+                },
+                legend: {
+                  orient: "vertical",
+                  left: "left",
+                  data: ["男", "女"],
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+                series: [
+                  {
+                    name: "访问来源",
+                    type: "pie",
+                    radius: ["50%", "70%"],
+                    center: ["50%", "60%"],
+                    // 是否启用防止标签重叠策略
+                    avoidLabelOverlap: false,
+                    //视觉引导线
+                    labelLine: {
+                      show: false
+                    },
+                    label: {
+                      show: false,
+                      position: "center"
+                    },
+
+                    // 高亮的扇区和标签样式。
+                    emphasis: {
+                      label: {
+                        position: "center",
+                        show: true,
+                        formatter: "{b}\n{d}%",
+                        textStyle: {
+                          fontSize: "30",
+                          fontWeight: "bold"
+                        }
+                      }
+                    },
+                    labelLine: {
+                      normal: {
+                        show: false
+                      }
+                    },
+                    data: [{ value: 63, name: "男" }, { value: 38, name: "女" }],
+                    itemStyle: {
+                      emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: "rgba(0, 0, 0, 0.5)"
+                      }
+                    }
+                  }
+                ]
+              };
+              myChart3.setOption(option);
+
+              var index = 0; //存储mouseover事件的dataIndex
+              //默认 0 ，
+              myChart3.dispatchAction({
+                type: "highlight",
+                // seriesIndex: 1,
+                dataIndex: 0
+              });
+              // 点击
+              myChart3.on("mouseover", function(e) {
+                // console.log(index)
+                if (e.dataIndex != index) {
+                  myChart3.dispatchAction({
+                    type: "downplay",
+                    // seriesIndex: 1,
+                    dataIndex: index
+                  });
+                  myChart3.dispatchAction({
+                    type: "highlight",
+                    // seriesIndex: 1,
+                    dataIndex: e.dataIndex
+                  });
+                  index = e.dataIndex;
+                }
+              });
+
+              myChart3.on("mouseout", function(e) {
+                // console.log(index)
+                myChart3.dispatchAction({
+                  type: "highlight",
+                  // seriesIndex: 1,
+                  dataIndex: index
+                });
+              });
+            }
+
+            function chartMap4() {
+              var option = {
+                title: {
+                  text: "用户学历分布",
+                  x: "center",
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+
+                tooltip: {
+                  trigger: "item",
+                  formatter: "{a} <br/>{b} : {c} ({d}%)"
+                  // position: ['50%', '50%'],
+                },
+                legend: {
+                  orient: "vertical",
+                  left: "left",
+                  data: ["高中", "硕士以上", "大专", "本科", "初中以下"],
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+                series: [
+                  {
+                    name: "访问来源",
+                    type: "pie",
+                    radius: ["50%", "70%"],
+                    center: ["50%", "60%"],
+                    // 是否启用防止标签重叠策略
+                    avoidLabelOverlap: false,
+                    //视觉引导线
+                    labelLine: {
+                      show: false
+                    },
+                    label: {
+                      show: false,
+                      position: "center"
+                    },
+
+                    // 高亮的扇区和标签样式。
+                    emphasis: {
+                      label: {
+                        position: "center",
+                        show: true,
+                        formatter: "{b}\n{d}%",
+                        textStyle: {
+                          fontSize: "30",
+                          fontWeight: "bold"
+                        }
+                      }
+                    },
+                    labelLine: {
+                      normal: {
+                        show: false
+                      }
+                    },
+                    data: [
+                      { value: 30, name: "高中" },
+                      { value: 25, name: "硕士以上" },
+                      { value: 25, name: "大专" },
+                      { value: 20, name: "本科" },
+                      { value: 10, name: "初中以下" }
+                    ],
+                    itemStyle: {
+                      emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: "rgba(0, 0, 0, 0.5)"
+                      }
+                    }
+                  }
+                ]
+              };
+              myChart4.setOption(option);
+
+              var index = 0; //存储mouseover事件的dataIndex
+              //默认 0 ，
+              myChart4.dispatchAction({
+                type: "highlight",
+                // seriesIndex: 1,
+                dataIndex: 0
+              });
+              // 点击
+              myChart4.on("mouseover", function(e) {
+                // console.log(index)
+                if (e.dataIndex != index) {
+                  myChart4.dispatchAction({
+                    type: "downplay",
+                    // seriesIndex: 1,
+                    dataIndex: index
+                  });
+                  myChart4.dispatchAction({
+                    type: "highlight",
+                    // seriesIndex: 1,
+                    dataIndex: e.dataIndex
+                  });
+                  index = e.dataIndex;
+                }
+              });
+
+              myChart4.on("mouseout", function(e) {
+                // console.log(index)
+                myChart4.dispatchAction({
+                  type: "highlight",
+                  // seriesIndex: 1,
+                  dataIndex: index
+                });
+              });
+            }
+
+            function chartMap5() {
+              var option = {
+                title: {
+                  text: "用户年龄分布",
+                  x: "center",
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+
+                tooltip: {
+                  trigger: "item",
+                  formatter: "{a} <br/>{b} : {c} ({d}%)"
+                  // position: ['50%', '50%'],
+                },
+                legend: {
+                  orient: "vertical",
+                  left: "left",
+                  data: ["30-39岁", "21岁以下", "22-29岁", "40岁以上"],
+                  textStyle: {
+                    color: "#ccc"
+                  }
+                },
+                series: [
+                  {
+                    name: "访问来源",
+                    type: "pie",
+                    radius: ["50%", "70%"],
+                    center: ["50%", "60%"],
+                    // 是否启用防止标签重叠策略
+                    avoidLabelOverlap: false,
+                    //视觉引导线
+                    labelLine: {
+                      show: false
+                    },
+                    label: {
+                      show: false,
+                      position: "center"
+                    },
+
+                    // 高亮的扇区和标签样式。
+                    emphasis: {
+                      label: {
+                        position: "center",
+                        show: true,
+                        formatter: "{b}\n{d}%",
+                        textStyle: {
+                          fontSize: "30",
+                          fontWeight: "bold"
+                        }
+                      }
+                    },
+                    labelLine: {
+                      normal: {
+                        show: false
+                      }
+                    },
+                    data: [
+                      { value: 45, name: "30-39岁" },
+                      { value: 39, name: "21岁以下" },
+                      { value: 34, name: "22-29岁" },
+                      { value: 3, name: "40岁以上" }
+                    ],
+                    itemStyle: {
+                      emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: "rgba(0, 0, 0, 0.5)"
+                      }
+                    }
+                  }
+                ]
+              };
+              myChart5.setOption(option);
+
+              var index = 0; //存储mouseover事件的dataIndex
+              //默认 0 ，
+              myChart5.dispatchAction({
+                type: "highlight",
+                // seriesIndex: 1,
+                dataIndex: 0
+              });
+              // 点击
+              myChart5.on("mouseover", function(e) {
+                // console.log(index)
+                if (e.dataIndex != index) {
+                  myChart5.dispatchAction({
+                    type: "downplay",
+                    // seriesIndex: 1,
+                    dataIndex: index
+                  });
+                  myChart5.dispatchAction({
+                    type: "highlight",
+                    // seriesIndex: 1,
+                    dataIndex: e.dataIndex
+                  });
+                  index = e.dataIndex;
+                }
+              });
+
+              myChart5.on("mouseout", function(e) {
+                // console.log(index)
+                myChart5.dispatchAction({
+                  type: "highlight",
+                  // seriesIndex: 1,
+                  dataIndex: index
+                });
+              });
+            }
+
+            function chartMap6() {
+              var geoCoordMap = {
+                甘肃: [103.73, 36.03],
+                青海: [101.74, 36.56],
+                四川: [104.06, 30.67],
+                河北: [114.48, 38.03],
+                云南: [102.73, 25.04],
+                贵州: [106.71, 26.57],
+                湖北: [114.31, 30.52],
+                河南: [113.65, 34.76],
+                山东: [117, 36.65],
+                江苏: [118.78, 32.04],
+                安徽: [117.27, 31.86],
+                浙江: [120.19, 30.26],
+                江西: [115.89, 28.68],
+                福建: [119.3, 26.08],
+                广东: [113.23, 23.16],
+                湖南: [113, 28.21],
+                海南: [110.35, 20.02],
+                辽宁: [123.38, 41.8],
+                吉林: [125.35, 43.88],
+                黑龙江: [126.63, 45.75],
+                山西: [112.53, 37.87],
+                陕西: [108.95, 34.27],
+                台湾: [121.3, 25.03],
+                北京: [116.46, 39.92],
+                上海: [121.48, 31.22],
+                重庆: [106.54, 29.59],
+                天津: [117.2, 39.13],
+                内蒙古: [111.65, 40.82],
+                广西: [108.33, 22.84],
+                西藏: [91.11, 29.97],
+                宁夏: [106.27, 38.47],
+                新疆: [87.68, 43.77],
+                香港: [114.17, 22.28],
+                澳门: [113.54, 22.19]
+              };
+              var convertData = function(data) {
+                var res = [];
+                for (var i = 0; i < data.length; i++) {
+                  var geoCoord = geoCoordMap[data[i].name];
+                  if (geoCoord) {
+                    res.push(geoCoord.concat(data[i].value));
+                  }
+                }
+                return res;
+              };
+
+              var option = {
+                backgroundColor: "#404a59",
+                title: {
+                  text: "观看人群地域分布",
+                  left: "center",
+                  textStyle: {
+                    color: "#fff"
+                  }
+                },
+                tooltip: {
+                  trigger: "item"
+                },
+
+                visualMap: {
+                  type: "continuous",
+                  min: 0,
+                  max: 300,
+                  text: [210, 0],
+                  itemWidth: 12,
+                  itemHeight: 100,
+                  splitNumber: 5,
+                  color: ["#d94e5d", "#eac736", "#50a3ba"],
+                  textStyle: {
+                    color: "#fff"
+                  },
+
+                  orient: "horizontal",
+                  // 翻转
+                  // inverse: true,
+                  bottom: 50,
+                  left: 50
+                },
+                // 地理坐标系组件。
+                geo: {
+                  // 地图类型。ECharts 3 中因为地图精度的提高，不再内置地图数据增大代码体积
+                  map: "china",
+                  label: {
+                    emphasis: {
+                      show: false
+                    }
+                  },
+                  itemStyle: {
+                    normal: {
+                      areaColor: "#323c48",
+                      borderColor: "#111"
+                    },
+                    emphasis: {
+                      areaColor: "#2a333d"
+                    }
+                  }
+                },
+                series: [
+                  {
+                    name: "人数",
+                    type: "scatter",
+                    coordinateSystem: "geo",
+                    data: convertData([
+                      { name: "甘肃", value: 0 },
+                      { name: "青海", value: 0 },
+                      { name: "四川", value: 20 },
+                      { name: "河北", value: 30 },
+                      { name: "云南", value: 16 },
+                      { name: "贵州", value: 32 },
+                      { name: "湖北", value: 32 },
+                      { name: "河南", value: 32 },
+                      { name: "山东", value: 32 },
+                      { name: "江苏", value: 32 },
+                      { name: "安徽", value: 32 },
+                      { name: "浙江", value: 32 },
+                      { name: "江西", value: 32 },
+                      { name: "福建", value: 32 },
+                      { name: "广东", value: 150 },
+                      { name: "湖南", value: 32 },
+                      { name: "海南", value: 32 },
+                      { name: "辽宁", value: 32 },
+                      { name: "吉林", value: 32 },
+                      { name: "黑龙江", value: 32 },
+                      { name: "山西", value: 32 },
+                      { name: "陕西", value: 32 },
+                      { name: "台湾", value: 32 },
+                      // 4直辖市,
+                      { name: "北京", value: 200 },
+                      { name: "上海", value: 160 },
+                      { name: "重庆", value: 0 },
+                      { name: "天津", value: 0 },
+                      // 5自治区,
+                      { name: "内蒙古", value: 0 },
+                      { name: "广西", value: 17 },
+                      { name: "西藏", value: 17 },
+                      { name: "宁夏", value: 17 },
+                      { name: "新疆", value: 17 },
+                      // 2特别行政区,
+                      { name: "香港", value: 15 },
+                      { name: "澳门", value: 15 }
+                    ]),
+                    symbolSize: function(value){
+                      // console.log(value[2])
+                      return value[2]/10;
+                    },
+                    label: {
+                      normal: {
+                        formatter: "{b}",
+                        position: "right",
+                        show: false
+                      },
+                      emphasis: {
+                        show: true
+                      },
+
+                    },
+                    itemStyle: {
+                      emphasis: {
+                        borderColor: "#fff",
+                        borderWidth: 1
+                      }
+                    }
+                  }
+                ]
+              };
+              myChart6.setOption(option);
+            }
+
+            function chartMap7() {
+              var option = {
+                title: {
+                  text: "用户播放行为",
+                  // subtext: "515",
+                  // subtextStyle: {
+                  //   fontSize: 15,
+                  // },
+                  textStyle: {
+                    color: "#ccc"
+                  },
+                  top: 0
+                },
+                textStyle: {
+                  color: "#ccc"
+                },
+
+                //提示框组件
+                tooltip: {
+                  trigger: "axis",
+                  axisPointer: {
+                    type: "shadow"
+                  }
+                },
+                //图形固定说明文字
+                // legend: {
+                //   data: ["2011年", "2012年"]
+                // },
+
+                //直角坐标系内绘图网格
+                grid: {
+                  // show: true,
+                  left: "6%",
+                  right: "4%",
+                  bottom: "5%",
+                  // grid 区域是否包含坐标轴的刻度标签。
+                  containLabel: true
+                  // backgroundColor: 'rgba(128, 128, 128, 0.1)',
+                },
+                yAxis: {
+                  name: "拖拽次数",
+                  nameLocation: "center",
+                  nameGap: 35,
+                  type: "value",
+                  // 坐标轴两边留白策略
+                  boundaryGap: [0, 0.01],
+                  //坐标轴线
+                  axisLine: {
+                    show: false
+                  },
+                  //网格线
+                  splitLine: {
+                    show: true
+                  }
+                },
+                xAxis: {
+                  nameLocation: "end",
+                  nameGap: 5,
+                  nameTextStyle: {
+                    fontSize: 14
+                  },
+                  type: "category",
+                  data: [
+                    "00:00",
+                    "00:01",
+                    "00:02",
+                    "00:03",
+                    "00:04",
+                    "00:05",
+                    "00:06",
+                    "00:07",
+                    "00:08",
+                    "00:09",
+                    "00:10",
+                    "00:11",
+                    "00:12",
+                    "00:13",
+                    "00:14",
+                    "00:15",
+                    "00:16",
+                    "00:17",
+                    "00:18",
+                    "00:19",
+                    "00:20",
+                    "00:21",
+                    "00:22",
+                    "00:23",
+                    "00:24",
+                    "00:25",
+                    "00:26",
+                    "00:27",
+                    "00:28",
+                    "00:29",
+                    "00:30",
+                    "00:31",
+                    "00:32",
+                    "00:33",
+                    "00:34"
+                  ],
+                  axisLine: {
+                    show: true,
+                    lineStyle: {
+                      // color: "#ccc",
+                      opacity: 0.8
+                    }
+                  }
+                },
+                visualMap: {
+                  // 如何放置 visualMap 组件，水平（'horizontal'）或者竖直（'vertical'）
+                  orient: "horizontal",
+                  left: "right",
+                  top: "top",
+                  min: 10,
+                  max: 90,
+
+                  // 不显示 视觉映射组件
+                  show: false,
+                  // text: ["High Score", "Low Score"],
+                  // Map the score column to color
+                  dimension: 1,
+                  inRange: {
+                    color: ["red", "blue"]
+                  }
+                },
+                series: [
+                  {
+                    // name: "2011年",
+                    type: "bar",
+                    data: [
+                      9,
+                      44,
+                      37,
+                      41,
+                      62,
+                      51,
+                      18,
+                      55,
+                      25,
+                      63,
+                      4,
+                      23,
+                      40,
+                      58,
+                      26,
+                      64,
+                      67,
+                      2,
+                      38,
+                      52,
+                      16,
+                      49,
+                      11,
+                      24,
+                      5,
+                      43,
+                      7,
+                      70,
+                      21,
+                      0,
+                      57,
+                      12,
+                      14,
+                      34
+                    ],
+
+                    // data: [
+                    //   {value:42},
+                    //   {value:25},
+                    //   {value:79},
+                    //   {value:35},
+                    //   {value:16},
+                    //   {value:28},
+                    //   {value:19},
+                    //   {value:9},
+                    //   {value:30},
+                    //   {value:66},
+                    //   {value:34},
+                    //   {value:21},
+                    //   {value:7},
+                    //   {value:41},
+                    //   {value:43},
+                    //   {value:24},
+                    //   {value:64},
+                    //   {value:44},
+                    //   {value:5},
+                    //   {value:78},
+                    //   {value:37},
+                    //   {value:55},
+                    //   {value:61},
+                    //   {value:65},
+                    //   {value:47},
+                    //   {value:4},
+                    //   {value:73},
+                    //   {value:33},
+                    //   {value:11},
+                    //   {value:45},
+                    //   {value:56},
+                    //   {value:54},
+                    //   {value:10},
+                    //   {value:18}
+                    // ],
+                    // // itemStyle: {},
+                    barWidth: "10px"
+                  }
+                ]
+              };
+
+              myChart7.setOption(option);
+            }
+
+            // 自适应
+            var myeChart1 = echarts.getInstanceByDom(document.getElementById("main1")); //通过DOM id获取到echarts实例
+            var myeChart2 = echarts.getInstanceByDom(document.getElementById("main1"));
+            var myeChart3 = echarts.getInstanceByDom(document.getElementById("main1"));
+            var myeChart4 = echarts.getInstanceByDom(document.getElementById("main1"));
+            var myeChart5 = echarts.getInstanceByDom(document.getElementById("main1"));
+            var myeChart6 = echarts.getInstanceByDom(document.getElementById("main1"));
+            var myeChart7 = echarts.getInstanceByDom(document.getElementById("main1"));
+          window.onresize = function(){
+            myeChart1.resize();
+            myeChart2.resize();
+            myeChart3.resize();
+            myeChart4.resize();
+            myeChart5.resize();
+            myeChart6.resize();
+            myeChart7.resize();
+           };
+    </script>
+  </body>
+</html>
